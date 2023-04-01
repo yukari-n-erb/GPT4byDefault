@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "GPT-4 by Default",
+  "version": "1.0",
+  "description": "Change GPT-4 as default on New Chat of WebUI ChatGPT",
+  "permissions": ["tabs"],
+  "icons": {
+    "16": "icon/icon16.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://chat.openai.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
